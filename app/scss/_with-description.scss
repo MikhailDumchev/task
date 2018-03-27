@@ -1,0 +1,35 @@
+.with-description {
+    padding: 170px 0px 106px;
+    .section {
+        &:first-of-type {
+            div {
+                background-image: url("../img/document.svg");
+            }
+        }
+        &:last-of-type {
+            div {
+                background-image: url("../img/picture.svg");
+            }
+        }
+        div {
+            padding-left: 124px;
+            background-repeat: no-repeat;
+            background-position: 0% 50%;
+            background-size: 94px auto;
+            p {
+                &:not(.title) {
+                    color: $grey;
+                    font-size: 14px;
+                    font-weight: 400;
+                    margin: 0px auto;
+                }
+                &.title {
+                    color: $black;
+                    font-size: 28px;
+                    font-weight: 600;
+                    margin: 0px auto 14px;
+                }
+            } 
+        }
+    }
+}

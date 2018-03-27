@@ -1,0 +1,64 @@
+.with-form {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../img/map.png");
+    .additory-module {
+        display: table;
+        width: 430px;
+        height: 430px;
+        border-radius: 100%;
+        background-color: $whiteOpacity;
+        margin: 0px auto;
+    }
+    form {
+        display: table-cell;
+        vertical-align: middle;
+        div {
+            width: 277px;
+            margin: 0px auto;
+            padding-top: 60px;
+            textarea {
+                padding: 8px 0px;
+                width: 100%;
+                height: 80px;
+                border: 1px solid $lightGrey;
+                border-radius: 2px;
+                text-indent: 1em;
+                resize: none;
+                margin-bottom: 32px;
+            }
+            input {
+                &:not(.request-caller) {
+                    width: 100%;
+                    border: 1px solid $lightGrey;
+                    border-radius: 2px;
+                    height: 38px;
+                    text-indent: 1em;
+                    &:not(:last-of-type) {
+                        margin-bottom: 14px;
+                    }
+                }
+                &.request-caller {
+                    display: block;
+                    margin: 0px auto;
+                    width: 67px;
+                    height: 67px;
+                    background-color: $green;
+                    border: none;
+                    border-radius: 100%;
+                    background-position: 50% 50%;
+                    background-repeat: no-repeat;
+                    background-image: url("../img/mark.svg");
+                    background-size: auto 32px;
+                    @include animation(pulsation 1.5s infinite);
+                    @include transition(background-color, 0.2s, ease);
+                    &:hover {
+                        background-color: $darkGreen;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

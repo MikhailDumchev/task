@@ -1,0 +1,29 @@
+.with-pc {
+    background-color: $darkGreen;
+    .section {
+        padding-left: 338px;
+        h2 {
+            color: $white;
+            font-size: 40px;
+            font-weight: 600;
+            margin: 0px auto 35px;
+        }
+        p {
+            color: $white;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0px auto 40px;
+        }
+        .button {
+            display: inline-block;
+            min-width: 200px;
+            border: 4px solid $white;
+            border-radius: 8px;
+            padding: 4px 15px;
+            font-size: 28px;
+            font-weight: 600;
+            color: $white;
+            text-align: center;
+        }
+    }
+}
