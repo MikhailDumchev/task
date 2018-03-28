@@ -14,25 +14,29 @@
         transform-origin: 100%;
     }
     .section {
+        background-position: 50% 0px;
+        background-repeat: no-repeat;
+        background-image: url("../img/image-1.png");
+        padding-top: 180px;
         position: relative;
         z-index: 1;
-    }
-    h2 {
-        color: $white;
-        font-size: 40px;
-        font-weight: 600;
-        text-align: center;
-        margin: 0px auto 35px;
-    }
-    p {
-        color: $white;
-        font-size: 14px;
-        font-weight: 400;
-        &:not(:last-of-type) {
-            margin: 0px auto 40px;
+        h2 {
+            color: $white;
+            font-size: 40px;
+            font-weight: 600;
+            text-align: center;
+            margin: 0px auto 35px;
         }
-        &:last-of-type {
-            margin: 0px auto;
+        p {
+            color: $white;
+            font-size: 14px;
+            font-weight: 400;
+            &:not(:last-of-type) {
+                margin: 0px auto 40px;
+            }
+            &:last-of-type {
+                margin: 0px auto;
+            }
         }
     }
 }

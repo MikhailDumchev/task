@@ -1,18 +1,41 @@
 .with-pc {
     background-color: $darkGreen;
-    .section {
-        padding-left: 338px;
-        h2 {
-            color: $white;
-            font-size: 40px;
-            font-weight: 600;
-            margin: 0px auto 35px;
+    @media screen and (min-device-width: 721px) {
+        padding-top: 200px;
+    }
+    @media screen and (max-device-width: 720px) {
+        padding-top: 100px;
+    }
+    overflow: hidden;
+    .with-image {
+        position: relative;
+        text-align: center;
+        @media screen and (max-device-width: 720px) {
+            margin-bottom: 32px;
         }
-        p {
-            color: $white;
-            font-size: 14px;
-            font-weight: 400;
-            margin: 0px auto 40px;
+        img {
+            position: relative;
+            z-index: 1;
+        }
+    }
+    h2 {
+        color: $white;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0px auto 35px;
+        @media screen and (max-device-width: 720px) {
+            text-align: center;
+        }
+    }
+    p {
+        color: $white;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0px auto 40px;
+    }
+    div {
+        @media screen and (max-device-width: 720px) {
+            text-align: center;
         }
         .button {
             display: inline-block;
@@ -24,6 +47,11 @@
             font-weight: 600;
             color: $white;
             text-align: center;
+            @include transition(all, 0.2s, ease);
+            &:hover {
+                cursor: pointer;
+                background-color: $greenHoover;
+            }
         }
     }
 }

@@ -1,0 +1,24 @@
+$errorColor: rgb(255, 69, 0);
+.error-message {
+    position: absolute;
+    padding-left: 30px;
+    color: $errorColor;
+    font-size: 14px;
+    white-space: nowrap;
+    background-image: url("../img/exclamation-note.svg");
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    background-size: 20px 20px;
+    &:hover {
+        cursor: text;
+    }
+}
+input[type=text].error,
+input[type=email].error,
+textarea.error {
+    box-shadow: inset 0px 0px 0px 1px $errorColor !important;
+    color: $errorColor;
+}
+.checkbox.error {
+    border: 1px solid $errorColor !important;
+}

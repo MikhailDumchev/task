@@ -1,0 +1,29 @@
+.target {
+    opacity: 0;
+    span {
+        position: relative;
+        top: 0px;
+        @include transition(all 0.8s, ease);
+        transform-origin: 50% 50%;
+        &:not(.second-part) {
+            display: inline-block;
+        }
+        &.animated-0 {
+            top: -30px !important;
+            @include transform(rotate(360deg) !important);
+            opacity: 0;
+        }
+        &.animated-1 {
+            top: 30px !important;
+            @include transform(rotate(-360deg) !important);
+            opacity: 0;
+        }
+        &.animated-2 {
+            @include transform(scale(0.5) !important);
+            opacity: 0 !important;
+        }
+        &.animated-3 {
+            opacity: 0 !important;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+svg {
+    display: block;
+    margin: 0px auto 60px;
+    width: 274px;
+    height: 274px;
+    background-color: $black;
+    border-radius: 100%;
+    .line {
+        stroke: $white;
+        stroke-width: 5px;
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        @include animation(drawing 2s linear forwards);
+        &:nth-of-type(2) {
+            animation-delay: 0.3s;
+        }
+        &:nth-of-type(3) {
+            animation-delay: 0.6s;
+        }
+        &:nth-of-type(4) {
+            animation-delay: 0.9s;
+        }
+        &:last-of-type {
+            animation-delay: 1.2s;
+        }
+    }
+}

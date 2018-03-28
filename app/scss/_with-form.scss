@@ -5,19 +5,38 @@
     background-image: url("../img/map.png");
     .additory-module {
         display: table;
-        width: 430px;
-        height: 430px;
-        border-radius: 100%;
+        width: 100%;
         background-color: $whiteOpacity;
         margin: 0px auto;
+        @media screen and (min-device-width: 721px) {
+            width: 430px;
+            height: 430px;
+            border-radius: 100%;
+        }
+        @media screen and (max-device-width: 720px) {
+            padding: 30px;
+        }
     }
     form {
         display: table-cell;
         vertical-align: middle;
         div {
-            width: 277px;
-            margin: 0px auto;
-            padding-top: 60px;
+            @media screen and (min-device-width: 721px) {
+                &:not(.form-row) {
+                    width: 277px;
+                    margin: 0px auto;
+                    padding-top: 60px;
+                }
+            }
+            .form-row {
+                position: relative;
+                &:not(:last-of-type) {
+                    margin-bottom: 14px;
+                }
+                &:last-of-type {
+                    margin-bottom: 32px;
+                }
+            }
             textarea {
                 padding: 8px 0px;
                 width: 100%;
@@ -26,7 +45,9 @@
                 border-radius: 2px;
                 text-indent: 1em;
                 resize: none;
-                margin-bottom: 32px;
+                &:focus {
+                    border: 1px solid $darkBlue;
+                }
             }
             input {
                 &:not(.request-caller) {
@@ -35,8 +56,8 @@
                     border-radius: 2px;
                     height: 38px;
                     text-indent: 1em;
-                    &:not(:last-of-type) {
-                        margin-bottom: 14px;
+                    &:focus {
+                        border: 1px solid $darkBlue;
                     }
                 }
                 &.request-caller {

@@ -1,6 +1,16 @@
 .with-description {
-    padding: 170px 0px 106px;
+    @media screen and (min-device-width: 721px) {
+        padding: 170px 0px 106px;
+    }
+    @media screen and (max-device-width: 720px) {
+        padding: 170px 0px 60px;
+    }
     .section {
+        @media screen and (max-device-width: 720px) {
+            &:not(:last-of-type) {
+                margin-bottom: 30px;
+            }
+        }
         &:first-of-type {
             div {
                 background-image: url("../img/document.svg");

@@ -2,6 +2,8 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "_animation.scss";
+@import "_validation.scss";
+@import "_spinner.scss";
 body {
     font-family: "Open Sans", sans-serif;
 }
@@ -10,10 +12,20 @@ body {
     width: 100%;
     .internal-module {
         display: table-cell;
-        vertical-align: middle;
         height: 100vh;
+        &:not(.top-align) {
+            vertical-align: middle;
+            padding: 60px 0px;
+        }
+        &.top-align {
+            vertical-align: top;
+            padding-top: 60px;
+            padding-bottom: 215px;
+        }
     }
 }
+@import "_animation-handler.scss";
+@import "_image.scss";
 @import "_with-pc.scss";
 @import "_with-tablets.scss";
 @import "_with-description.scss";

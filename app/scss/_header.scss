@@ -6,15 +6,20 @@ header {
     background-image: url("../img/background.png");
     h2 {
         color: $white;
-        font-size: 50px;
         font-weight: 400;
         text-align: center;
         text-transform: uppercase;
-        margin: 0px auto;
-        span {
+        margin: 0px auto 40px;
+        span.second-part {
             display: block;
             margin-top: 10px;
             font-weight: 700;
+        }
+        @media screen and (min-device-width: 721px) {
+            font-size: 50px;
+        }
+        @media screen and (max-device-width: 720px) {
+            font-size: 20px;
         }
     }
     .container {
@@ -33,18 +38,37 @@ header {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
     }
     form {
+        @media screen and (min-device-width: 721px) {
+            width: 335px;
+            margin-left: -167px;
+        }
+        @media screen and (max-device-width: 720px) {
+            max-width: 320px;
+            width: 100%;
+            margin-left: -160px;
+        }
         position: absolute;
         left: 50%;
         bottom: -120px;
         display: block;
-        margin-left: -167px;
-        width: 335px;
         border: 1px solid $lightGrey;
         border-radius: 2px;
         background-color: $white;
         padding-bottom: 20px;
+        img {
+            width: 100%;
+        }
         div {
-            padding: 32px 32px 24px 32px;
+            &:not(.with-button) {
+                position: relative;
+                padding: 32px 32px 24px 32px;
+            }
+            &.with-button {
+                @include transition(transform, 0.2s, ease);
+                &:hover {
+                    @include transform(scale(1.05));
+                }
+            }
         }
         input {
             &:not(.request-caller) {
@@ -53,6 +77,9 @@ header {
                 border-radius: 2px;
                 height: 38px;
                 text-indent: 1em;
+                &:focus {
+                    border: 1px solid $darkBlue;
+                }
             }
             &.request-caller {
                 display: block;
@@ -66,9 +93,10 @@ header {
                 font-weight: 700;
                 text-transform: uppercase;
                 border: none;
-                @include transition(background-color, 0.2s, ease);
+                @include transition(all, 0.2s, ease);
                 &:hover {
                     background-color: $darkBlue;
+                    @include animation(jumping 2s linear infinite);
                 }
             }
         }
